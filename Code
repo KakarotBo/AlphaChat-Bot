@@ -1,0 +1,39 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.members = True
+intents.messages = True
+intents.guilds = True
+intents.reactions = True
+intents.message_content = True
+bot = commands.Bot(command_prefix='?', intents=intents)
+
+@bot.event
+async def on_ready():
+    print('Logged in as {0.user}'.format(bot))
+
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+
+    if "hello" in message.content.lower():
+        await message.channel.send("Hello!")
+    elif "bye" in message.content.lower():
+        await message.channel.send("Goodbye!")
+    elif "how are you" in message.content.lower():
+        await message.channel.send("I'm doing well, thank you for asking!")
+    elif "yeet" in message.content.lower():
+        await message.channel.send("YA YEET!")
+
+    await bot.process_commands(message)
+
+
+@bot.command()
+async def delete(ctx, num_messages: int):
+    await ctx.channel.purge(limit=num_messages + 1)
+    await ctx.send(f"{num_messages} messages deleted.")
+
+
+bot.run('MTA1MzMzNTg1MzkxMDQ1ODQzOA.GMTG3X.QUy2nVA42Ad3wRwz6RmudK0gbtuL9QisFGCuK8')
