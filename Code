@@ -36,4 +36,4 @@ async def delete(ctx, num_messages: int):
     await ctx.send(f"{num_messages} messages deleted.")
 
 
-bot.run('MTA1MzMzNTg1MzkxMDQ1ODQzOA.GMTG3X.QUy2nVA42Ad3wRwz6RmudK0gbtuL9QisFGCuK8')
+bot.run('bot_token')
