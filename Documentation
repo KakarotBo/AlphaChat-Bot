@@ -1,0 +1,8 @@
+AlphaChat is a discord bot that can be used to reply message triggers that the user is messaging.
+Although the bot(code) is still working-in-progress, but the basic commands of the bot are "hello", "bye", "how are you", and some custom commands that I have made
+"yeet". The bot can also delete messages, somewhat similar to some other bots except the bot will mention how many messages have been deleted.
+"hello" - The bot will reply with "Hello!"
+"bye" - The bot will reply with "Goodbye!"
+"how are you" - The bot will reply with "I'm doing well, thank you for asking!"
+"yeet" - The bot will reply with "YA YEET!"
+The command prefix for the bot is "?" but I have made it so that just by typing "hello" without the prefix, the bot will still reply with a message.
